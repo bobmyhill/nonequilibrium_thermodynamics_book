@@ -1,0 +1,308 @@
+\chapter{Conservation Laws}
+
+\section{Introduction}
+
+Thermodynamics is based on two fundamental laws: the first law of
+thermodynamics or law of conservation of energy, and the second law
+of thermodynamics or entropy law. A systematic macroscopic scheme
+for the description of non-equilibrium processes (i.e. the scheme of
+thermodynamics of irreversible processes) must also be built upon these
+two laws. However, it is necessary to formulate these laws in a way
+suitable for the purpose at hand.
+In this chapter we shall be concerned with the first law of thermodynamics.
+Since we wish to develop a theory applicable to systems of
+which the properties are continuous functions of space coordinates and
+time, we shall give a local formulation of the law of conservation of
+energy. As the local momentum and mass densities may change in time,
+we shall also need local formulations of the laws of conservation of
+momentum and mass.
+In the following sections these conservation laws will be written
+down for a multi-component system in which chemical reactions may
+occur and on which conservative external forces are exerted.
+It may be remarked that the macroscopic conservation laws of
+matter, momentum and energy are, from a microscopic point of view,
+consequences of the mechanical laws governing the motions of the
+constituent particles of the system.
+
+\section{Conservation of Mass}
+Let us consider a system consisting of $n$ components amongst which $r$
+chemical reactions are possible. The rate of change of the mass of component $k$ within a given volume $V$ is
+\begin{equation}
+\frac{d}{dt} \int^V \rho_k dV = \int^V \frac{\partial \rho_k}{\partial t} dV
+    \label{eq:II.1}
+\end{equation}
+where $\rho_k$ is the density (mass per unit volume) of $k$. This quantity is equal to the sum of the material flow of component $k$ into the volume $V$ through its surface $\Omega$ and the total production of $k$ in chemical reactions which occur inside $V$
+\begin{equation}
+\int^V \frac{\partial \rho_k}{\partial t} dV = - \int^{\Omega} \rho_k \bm{v}_k \cdot d \bm{\Omega} + \sum_{j=1}^{r} \int^V \nu_{kj}J_j dV
+    \label{eq:II.2}
+\end{equation}
+where $d \bm{\Omega}$ is a vector with magnitude $d \Omega$ normal to the surface and counted positive from the inside to the outside. Furthermore $\bm{v}_k$ is the velocity of $k$, and $\nu_{kj}J_j$ the production of $k$ per unit volume in the $j$th chemical reaction. The quantity $\nu_{kj}$ divided by the molecular mass $M_k$ of component $k$ is proportional to the stoichiometric coefficient with which $k$ appears in the chemical reaction $j$. The coefficients $\nu_{kj}$ are
+counted positive when components $k$ appear in the second, negative
+when they appear in the first member of the reaction equation. The
+quantity $J_j$ is called the chemical reaction rate of reaction $j$. It represents a mass per unit volume and unit time. The quantities $\rho_k$, $\bm{v}_k$ and $J_j$ occurring in \eqref{eq:II.2} are all functions of time and of space coordinates. Applying Gauss' theorem to the surface integral occurring in \eqref{eq:II.2}, we obtain
+\begin{equation}
+\frac{\partial \rho_k}{\partial t} = - \textrm{div } \rho_k \bm{v}_k
+    \label{eq:II.3}
+\end{equation}
+
+since \eqref{eq:II.2} is valid for an arbitrary volume $V$. This equation has the form of a so-called balance equation: the local change of the left-hand side is equal to the negative divergence of the flow of $k$ and a source term giving the production (or destruction) of substance $k$. Since mass is conserved in each separate chemical reaction we have
+\begin{equation}
+\sum_{k=1}^{n} \nu_{kj} = 0
+    \label{eq:II.4}
+\end{equation}
+Summing equation \eqref{eq:II.3} over all substances $k$ one obtains then the law of conservation of mass:
+\begin{equation}
+\frac{\partial \rho}{\partial t} = - \textrm{div } \rho \bm{v}
+    \label{eq:II.5}
+\end{equation}
+where $\rho$ the total density
+\begin{equation}
+    \rho = \sum_{k=1}^{n} \rho_k
+    \label{eq:II.6}
+\end{equation}
+and $\bm{v}$ the centre of mass ("barycentric") velocity
+\begin{equation}
+\bm{v} = \sum_{k=1}^{n} = \rho_k \bm{v}_k / \rho
+    \label{eq:II.7}
+\end{equation}
+Equation \eqref{eq:II.5} expresses the fact that the total mass is conserved, i.e. that the total mass in any volume element of the system can only change if matter flows into (or out of) the volume element.
+The mass equations can be written in an alternative form by introducing
+the (barycentric) substantial time derivative
+\begin{equation}
+\frac{d}{d t} = \frac{\partial }{\partial t} + \bm{v} \cdot \textrm{grad }
+    \label{eq:II.8}
+\end{equation}
+and the "diffusion flow" of substance k defined with respect to the
+barycentric motion
+\begin{equation}
+\bm{J}_k = \rho_k \left( \bm{v}_k - \bm{v} \right)
+    \label{eq:II.9}
+\end{equation}
+With the help of \eqref{eq:II.8} and \eqref{eq:II.9}, equations \eqref{eq:II.3} become
+\begin{equation}
+\frac{d rho_k}{d t} = - \rho_k \textrm{div } \bm{v} - \textrm{div } \bm{J}_k + \sum_{j=1}^r \nu_{kj} J_j
+    \label{eq:II.10}
+\end{equation}
+and equation \eqref{eq:II.5}
+\begin{equation}
+\frac{d rho}{d t} = - \rho \textrm{div } \bm{v}
+    \label{eq:II.11}
+\end{equation}
+If mass fractions $c_k$:
+\begin{equation}
+    c_k = \rho_k / \rho
+    \label{eq:II.12}
+\end{equation}
+are employed, equations \eqref{eq:II.10} take the simple form
+\begin{equation}
+    \rho \frac{d c_k}{d t} = - \textrm{div } \bm{J}_k + \sum_{j=1}^r \nu_{kj} J_j
+    \label{eq:II.13}
+\end{equation}
+where \eqref{eq:II.11} has been used also.
+
+With the specific volume $v = p^{-1}$ formula \eqref{eq:II.11} may also be written as
+\begin{equation}
+    \rho \frac{d v}{d t} = \textrm{div } \bm{v}
+    \label{eq:II.14}
+\end{equation}
+We note that it follows from \eqref{eq:II.7} and \eqref{eq:II.9} that
+\begin{equation}
+\sum_{k=1}^{n} \bm{J}_k = 0
+    \label{eq:II.15}
+\end{equation}
+which means that only $n-1$ of the $n$ diffusion flows are independent.
+Similarly only $n-1$ of the $n$ equations \eqref{eq:II.13} are independent. In fact by summing \eqref{eq:II.13} over all $k$, both members vanish identically as a result of \eqref{eq:II.4}, \eqref{eq:II.12} and \eqref{eq:II.15}. The $n$th independent equation describing the change of mass density within the system is now equation \eqref{eq:II.14}.
+We note finally that the following relation, valid for an arbitrary
+local property $a$, (which may be a scalar or a component of a vector or
+tensor, etc.):
+\begin{equation}
+\rho \frac{d a}{d t} = \frac{\partial a \rho}{\partial t} + \textrm{div } \bm{a \rho v}
+    \label{eq:II.16}
+\end{equation}
+is a consequence of the mass equation \eqref{eq:II.5} and of \eqref{eq:II.8}.
+
+\section{The Equation of Motion}
+The equation of motion of the system is
+\begin{equation}
+\rho \frac{d v_{\alpha}}{d t} = - \sum_{\beta=1}^{3} \frac{\partial}{\partial x_{\beta}} P_{\beta \alpha} + \sum_{k=1}^{n} \rho_k F_{k \alpha}
+    \label{eq:II.17}
+\end{equation}
+where $v_{\alpha}$ ($\alpha = 1,2,3$) is a Cartesian component of $\bm{v}$, and where $x_{\alpha}$ ($\alpha = 1,2,3$) are the Cartesian coordinates. The derivative $d v_{\alpha} / dt$ is a component of the acceleration of the centre of gravity motion.
+
+The quantities $P_{\alpha \beta}$ ($\alpha, \beta = 1,2,3$) and $P_{k \alpha}$ ($\alpha = 1,2,3$) are the Cartesian components of the pressure (or stress) tensor $P$ of the medium and of the force per unit mass $\bm{F}_k$ exerted on the chemical component $k$ respectively.
+We shall assume here\footnote{This assumption is usually made in hydrodynamics, but is rigorously only justified for systems consisting of spherical molecules or at very low densities. For other systems however the pressure tensor may contain an antisymmetric part.} that the pressure tensor $P$ is symmetric,
+\begin{equation}
+P_{ \alpha \beta} = P_{\beta \alpha}
+    \label{eq:II.18}
+\end{equation}
+In tensor notation equations \eqref{eq:II.17} are written as
+\begin{equation}
+\rho \frac{d v_{\alpha}}{d t} = \textrm{Div } \bm{P} + \sum_k \rho_k \bm{F}_k
+    \label{eq:II.19}
+\end{equation}
+From a microscopic point of view one can say that the pressure tensor $\bm{P}$ results from the short-range interactions between the particles of the system, whereas $\bm{F}_k$ contains the external forces as well as a possible contribution from long-range interactions in the system.
+
+For the moment we shall restrict the discussion to the consideration
+of conservative forces which can be derived from a potential $\psi_k$ independent
+of time
+\begin{equation}
+\bm{F}_k = - \textrm{grad } \psi_k \textrm{ ,   } \frac{\partial \psi_k}{\partial t} = 0
+    \label{eq:II.20}
+\end{equation}
+
+Using relation \eqref{eq:II.16}, the equation of motion \eqref{eq:II.19} can also be written as
+\begin{equation}
+\frac{\partial \rho \bm{v}}{d t} = - \textrm{Div } \left(\rho \bm{v} \bm{v} + \bm{P} \right) + \sum_k \rho_k \bm{F}_k
+    \label{eq:II.21}
+\end{equation}
+where $\bm{v} \bm{v}$ is an ordered (dyadic) product, (cf. Appendix I on matrix and tensor notation). This equation has the form of a balance equation for the momentum density $\rho \bm{v}$. In fact it is seen that one can interpret the quantity $\rho \bm{v} \bm{v} + \bm{P}$ as a momentum flow, with a convective part $\rho \bm{v} \bm{v}$, and the quantity $\sum_k \rho_k \bm{F}_k$ as a source of momentum.
+
+It is possible to derive from \eqref{eq:II.17} a balance equation for the kinetic energy of the centre of gravity motion by multiplying both members with the component $v_{\alpha}$ of the barycentric velocity and summing over ${\alpha}$
+\begin{equation}
+\rho \frac{d \frac{1}{2} v^2}{d t} = - \sum_{\alpha\,\beta} \frac{\partial}{\partial x_{\beta}} P_{\beta \alpha} v_{\alpha} 
++
+\sum_{\alpha\,\beta} P_{\beta \alpha} \frac{\partial}{\partial x_{\beta}} v_{\alpha}
++ 
+\sum_{k=1}^{n} \rho_k F_{k \alpha} v_{\alpha}
+    \label{eq:II.22}
+\end{equation}
+
+or, in tensor notation,
+\begin{equation}
+\rho \frac{d \frac{1}{2} v^2}{d t} = - \textrm{div } \left(\bm{P}\cdot \bm{v}\right)
++
+\bm{P} : \textrm{Grad } \bm{v} + \sum_k \rho_k \bm{F}_k \cdot \bm{v}
+    \label{eq:II.23}
+\end{equation}
+
+where
+\begin{equation}
+\bm{P} : \textrm{Grad } \bm{v} = \sum_{\alpha\,\beta} P_{\beta \alpha} \frac{\partial}{\partial x_{\beta}} v_{\alpha}
+    \label{eq:II.24}
+\end{equation}
+
+With the help of \eqref{eq:II.16}, equation \eqref{eq:II.23} becomes
+\begin{equation}
+\rho \frac{\partial \frac{1}{2} \rho v^2}{\partial t} = 
+- \textrm{div } \left(\frac{1}{2} \rho \bm{v}^2 \bm{v} + \bm{P}\cdot \bm{v}\right)
++
+\bm{P} : \textrm{Grad } \bm{v} + \sum_k \rho_k \bm{F}_k \cdot \bm{v}
+    \label{eq:II.25}
+\end{equation}
+
+We wish to establish now an equation for the rate of change of the
+potential energy density $\rho \psi = \sum_k \rho_k \psi_k$. In fact it follows from \eqref{eq:II.3}, \eqref{eq:II.9} and \eqref{eq:II.20} that
+\begin{equation}
+\frac{\partial \rho \psi}{\partial t} = - \textrm{div } \left( \rho \psi \bm{v}  + \sum_{k=1}^n \psi_k \bm{J}_k \right) - \sum_{k=1}^n \rho_k \bm{F}_k \cdot \bm{v} - \sum_{k=1}^n \bm{J}_k \cdot \bm{F}_k + \sum_{k=1}^n\sum_{j=1}^r \psi_k \nu_{kj} J_j
+    \label{eq:II.26}
+\end{equation}
+
+The last term vanishes if the potential energy is conserved in a
+chemical reaction
+\begin{equation}
+\sum_{k} \rho_k \nu_{kj} = 0
+    \label{eq:II.27}
+\end{equation}
+
+This is the case if the property of the particles, which is responsible
+for the interaction with a field of force, is itself conserved. Examples
+for this case are the mass in a gravitational field and the charge in an
+electric field. Equation \eqref{eq:II.26} then reduces to
+\begin{equation}
+\frac{\partial \rho \psi}{\partial t} = - \textrm{div } \left( \rho \psi \bm{v}  + \sum_{k} \psi_k \bm{J}_k \right) - \sum_{k} \rho_k \bm{F}_k \cdot \bm{v} - \sum_{k} \bm{J}_k \cdot \bm{F}_k
+    \label{eq:II.28}
+\end{equation}
+
+Let us now add the two equations \eqref{eq:II.25} and \eqref{eq:II.28} for the rate of change
+of the kinetic energy $\frac{1}{2} \rho \bm{v}^2$ and the potential energy $\rho \psi$:
+\begin{equation}
+\frac{\partial \rho \left(\frac{1}{2} \bm{v}^2 + \psi \right)}{\partial t} 
+= 
+- \textrm{div } \left( \rho \left( \frac{1}{2} \bm{v}^2 + \psi \right) \bm{v} + \bm{P} \cdot \bm{v} + \sum_{k} \psi_k \bm{J}_k \right) 
++
+\bm{P} : \textrm{Grad } \bm{v}
+- 
+\sum_{k} \bm{J}_k \cdot \bm{F}_k
+    \label{eq:II.29}
+\end{equation}
+This equation shows that the sum of kinetic and potential energy is
+not conserved, since a source term appears at the right-hand side.
+
+\section{Conservation of Energy}
+According to the principle of conservation of energy the total energy
+content within an arbitrary volume $V$ in the system can only change if
+energy flows into (or out of) the volume considered through its
+boundary $\Omega$
+\begin{equation}
+\frac{d}{dt} \int^V \rho e dV 
+= 
+\int^V \frac{\partial \rho e}{\partial t} dV 
+=
+- \int^{\Omega} \bm{J}_{e} \cdot d \bm{\Omega}
+    \label{eq:II.30}
+\end{equation}
+Here $e$ is the energy per unit mass, and $\bm{J}_{e}$ the energy flux per unit surface and unit time. We shall refer to $e$ as the total specific energy, because it includes all forms of energy in the system. Similarly we shall call $\bm{J}_{e}$ the total energy flux. With the help of Gauss' theorem we obtain the differential or local form of the law of conservation of energy
+\begin{equation}
+\frac{\partial \rho e}{\partial t} = - \textrm{div } \bm{J}_e
+    \label{eq:II.31}
+\end{equation}
+
+In order to relate this equation to the previously obtained result \eqref{eq:II.29} for the kinetic and potential energy, we must specify which are the various contributions to the energy $e$ and the flux $\bm{J}_e$.
+
+The total specific energy $e$ includes the specific kinetic energy $\frac{1}{2} \bm{v}^2$, the specific potential energy $\psi$, and the specific internal energy $u$:
+\begin{equation}
+e = \frac{1}{2} \bm{v}^2 + \psi + u
+    \label{eq:II.32}
+\end{equation}
+From a macroscopic point of view this relation can be considered as
+the definition of internal energy $u$. From a microscopic point of view $u$ represents the energy of thermal agitation as well as the energy due
+to the short-range molecular interactions. Similarly the total energy
+flux includes a convective term $\rho e \bm{v}$, an energy flux $\bm{P} \cdot \bm{v}$ due to the mechanical work performed on the system, a potential energy flux $\sum_k \psi_k \bm{J}_k$ due to the diffusion of the various components in the field of force, and finally a ``heat flow'' $\bm{J}_q$:
+\begin{equation}
+    \bm{J}_e = \rho e \bm{v} + \bm{P} \cdot \bm{v} + \sum_k \psi_k \bm{J}_k + \bm{J}_q
+    \label{eq:II.33}
+\end{equation}
+
+This relation may be considered as defining the heat flow $\bm{J}_q$. If we subtract equation \eqref{eq:II.29} from equation \eqref{eq:II.31}, we obtain, using also \eqref{eq:II.32} and \eqref{eq:II.33}, the balance equation for the internal energy $u$:
+\begin{equation}
+\frac{\partial \rho u}{\partial t} = - \textrm{div } \left( \rho u \bm{v} \right) - \bm{P} : \textrm{grad } \bm{v} + \sum_k \bm{J}_k \cdot \bm{F}_k
+    \label{eq:II.34}
+\end{equation}
+
+It is apparent from this equation that the internal energy $u$ is not
+conserved. In fact a source terms appears, which is equal but of
+opposite sign to the source term of the balance equation \eqref{eq:II.29} for kinetic and potential energy.
+
+The equation \eqref{eq:II.34} may be written in an alternative form. We can split the total pressure tensor into a scalar\footnote{In assuming that the equilibrium part of the total tensor is a scalar we
+restrict the discussion to non-elastic :fluids. For an elastic medium the equilibrium ``pressure'' tensor is the elastic stress tensor.} hydrostatic part $p$ and a tensor $\bm{\Pi}$:
+\begin{equation}
+\bm{P} = p \bm{U} + \bm{\Pi}
+    \label{eq:II.35}
+\end{equation}
+
+where $\bm{U}$ is the unit matrix with elements $\delta_{\alpha \beta}$ ($\delta_{\alpha \beta} = 1$ if $\alpha = \beta$, $\delta_{\alpha \beta} = 0$ if $\alpha \neq \beta$). With this relation and \eqref{eq:II.16}, equation \eqref{eq:II.34} becomes
+\begin{equation}
+\rho \frac{d u}{d t} = \rho \frac{d q}{d t} - p \textrm{div } \bm{v} - \bm{\Pi} : \textrm{Grad } \bm{v} + \sum_k \bm{J}_k \cdot \bm{F}_k
+    \label{eq:II.36}
+\end{equation}
+where use has been made of the equality
+\begin{equation}
+\bm{U} : \textrm{Grad } \bm{v} = \textrm{div } \bm{v}
+    \label{eq:II.37}
+\end{equation}
+and where
+\begin{equation}
+\rho \frac{d q}{d t} = - \textrm{div } \bm{J}_q
+    \label{eq:II.38}
+\end{equation}
+defines dq, the ``heat'' added per unit of mass.
+
+With \eqref{eq:II.14} equation \eqref{eq:II.36}, the "first law of thermodynamics", can finally be written in the form
+\begin{equation}
+    \frac{d u}{d t} = \frac{d q}{d t} - p \frac{d v}{d t} - v \bm{\Pi} : \textrm{Grad } \bm{v} + v \sum_k \bm{J_k \cdot \bm{F}_k}
+    \label{eq:II.39}
+\end{equation}
+where $v = \rho^{-1}$ is the specific volume.
+
+As stated in the preceding section we have restricted ourselves in
+this chapter to the consideration of conservative forces $F_k$ of the type \eqref{eq:II.20}. The more general case, which arises for instance when electromagnetic forces are considered, will be treated in Chapter XIII.

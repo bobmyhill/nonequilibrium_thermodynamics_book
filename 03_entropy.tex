@@ -1,0 +1,298 @@
+\chapter{Entropy Law and Entropy Balance}
+\section{The Second Law of Thermodynamics}
+
+According to the principles of thermodynamics one can introduce for
+any macroscopic system a state function $S$, the entropy of the system,
+which has the following properties.
+
+The variation of the entropy $dS$ may be written as the sum of two
+terms
+\begin{equation}
+dS = d_e S + d_i S
+    \label{eq:III.1}
+\end{equation}
+where $d_e S$ is the entropy supplied to the system by its surroundings, and $d_i S$ the entropy produced inside the system. The second law of thermodynamics states that $d_i S$ must be zero for reversible (or equilibrium) transformations and positive for irreversible transformations of the system:
+\begin{equation}
+d_i S \geq 0
+    \label{eq:III.2}
+\end{equation}
+The entropy supplied, $d_e S$, on the other hand may be positive, zero or negative, depending on the interaction of the system with its surroundings. Thus for an adiabatically insulated system (i.e. a system
+which can exchange neither heat nor matter with its surroundings)
+$d_e S$ is equal to zero, and it follows from \eqref{eq:III.1} and \eqref{eq:III.2} that
+\begin{equation}
+d S \geq 0 \textrm{ for an adiabatically insulated system}
+    \label{eq:III.3}
+\end{equation}
+This is a well-known form of the second law of thermodynamics.
+
+For a so-called closed system, which may only exchange heat with
+its surroundings, we have according to the theorem of Carnot-Clausius:
+\begin{equation}
+d_e S = \frac{\delta Q}{T}
+    \label{eq:III.4}
+\end{equation}
+where $\delta Q$ is the heat supplied to the system by its surroundings and $T$ the absolute temperature at which heat is received by the system.
+
+From (1) and (2) it follows for this case that
+\begin{equation}
+dS \geq \frac{dQ}{T} \textrm{ for a closed system}
+    \label{eq:III.5}
+\end{equation}
+which is also a well-known form of the second law of thermodynamics.
+For open systems, i.e. systems which may exchange heat as well as
+matter with their surroundings $d_e S$ contains also a term connected
+with the transfer of matter (cf. also section 2 of this chapter). The theorem of Carnot-Clausius, which is contained in formulae \eqref{eq:III.1}, \eqref{eq:III.2} and \eqref{eq:III.4}, does
+not apply to such systems. However the very general statements
+contained in \eqref{eq:III.1} and \eqref{eq:III.2} alone remain valid.
+
+We may remark at this point that thermodynamics in the customary
+sense is concerned with the study of the reversible transformations for
+which the equality in \eqref{eq:III.2} holds. In thermodynamics of irreversible processes, however, one of the important objectives is to relate the quantity $d_i S$, the entropy production, to the various irreversible phenomena which may occur inside the system. Before calculating the entropy production in terms of the quantities which characterize the irreversible phenomena, we shall rewrite \eqref{eq:III.1} and \eqref{eq:III.2} in a form which is more suitable for the description of systems in which the densities of the extensive properties (such as mass and energy, considered in the previous chapter) are continuous functions of space coordinates. Let us write
+\begin{equation}
+S = \int^V \rho s dV
+    \label{eq:III.6}
+\end{equation}
+\begin{equation}
+\frac{d_e S}{dt} = - \int^{\Omega} \bm{J}_{s,tot} \cdot d \bm{\Omega}
+    \label{eq:III.7}
+\end{equation}
+\begin{equation}
+\frac{d_i S}{dt} = \int^{V} \sigma d V
+    \label{eq:III.8}
+\end{equation}
+where $s$ is the entropy per unit mass, $\bm{J}_{s,tot}$ the total entropy flow per unit area and unit time, and $\sigma$ the entropy source strength or entropy production per unit volume and unit time.
+With \eqref{eq:III.6}, \eqref{eq:III.7} and \eqref{eq:III.8}, formula \eqref{eq:III.1} may be rewritten, using also Gauss' theorem, in the form
+\begin{equation}
+\int^{V} \left( \frac{\partial \rho s}{\partial t} + \textrm{div } \bm{J}_{s,tot} - \sigma \right) dV = 0
+    \label{eq:III.9}
+\end{equation}
+From this relation it follows, since \eqref{eq:III.1} and \eqref{eq:III.2} must hold for an arbitrary volume $V$, that
+\begin{equation}
+\frac{\partial \rho s}{\partial t} = - \textrm{div } \bm{J}_{s,tot} + \sigma
+    \label{eq:III.10}
+\end{equation}
+\begin{equation}
+\sigma \geq 0
+    \label{eq:III.11}
+\end{equation}
+These two formulae are the local forms of \eqref{eq:III.1} and \eqref{eq:III.2}, i.e. the local mathematical expression for the second law of thermodynamics. Equation \eqref{eq:III.10} is formally a balance equation for the entropy density $\rho s$, with a source term $\sigma$ which satisfies the important inequality \eqref{eq:III.11}.
+With the help of relation \eqref{eq:II.16}, equation \eqref{eq:III.10} can be rewritten in a slightly different form,
+\begin{equation}
+\rho \frac{d s}{d t} = - \textrm{div } \bm{J}_{s} + \sigma
+    \label{eq:III.12}
+\end{equation}
+where the entropy flux $\bm{J}_s$ is the difference between the total entropy flux $\bm{J}_{s,tot}$ and a convective term $\rho s \bm{v}$
+\begin{equation}
+\bm{J}_{s} = \bm{J}_{s,tot} - \rho s \bm{v}
+    \label{eq:III.13}
+\end{equation}
+In obtaining \eqref{eq:III.10} and \eqref{eq:III.11} we have assumed that the statements \eqref{eq:III.1} and \eqref{eq:III.2} also hold for infinitesimally small parts of the system, or in other words, that the laws which are valid for macroscopic systems remain valid for infinitesimally small parts of it. This is in agreement with the point of view currently adopted in a macroscopic description of a continuous system. It implies, on a microscopic model, that the local macroscopic measurements performed on the system, are really measurements of the properties of small parts of the system, which still contain a large number of the constituting particles. Such small parts of the system one might call physically infinitesimal. With this in mind it still makes sense to speak about the local values of such fundamentally macroscopic concepts as entropy and entropy production.
+
+\section{The Entropy Balance Equation}
+We must now relate the variations in the properties of systems
+studied in Chapter II to the rate of change of the entropy. This will
+enable us to obtain more explicit expressions for the entropy flux ls
+and the entropy source strength $\sigma$ which appear in \eqref{eq:III.12}.
+From thermodynamics we know that the entropy per unit mass $s$ is,
+for a system in equilibrium, a well-defined function of the various
+parameters which are necessary to define the macroscopic state of the
+system completely. For the systems considered in Chapter II these
+are the internal energy $u$, the specific volume $v$, and the mass fractions $c_k$:
+\begin{equation}
+s = s(u, v, c_k)
+    \label{eq:III.14}
+\end{equation}
+This is also expressed by the fact that, in equilibrium, the total differential of $s$ is given by the Gibbs relation (cf. Appendix II):
+\begin{equation}
+T ds = du + pdv - \sum_{k=1}^{n} \mu_k d c_k
+    \label{eq:III.15}
+\end{equation}
+where $p$ is the equilibrium pressure, and $\mu_k$ the thermodynamic or
+chemical potential of component $k$ (partial specific Gibbs function).
+It will now be assumed that, although the total system is not in
+equilibrium, there exists within small mass elements a state of ``local'' equilibrium, for which the local entropy $s$ is the same function \eqref{eq:III.14} of $u$, $v$ and $c_k$ as in real equilibrium. In particular we assume that formula \eqref{eq:III.15} remains valid for a mass element followed along its centre of gravity motion:
+\begin{equation}
+T \frac{ds}{dt} = \frac{du}{dt} + p\frac{dv}{dt} - \sum_{k=1}^{n} \mu_k \frac{d c_k}{dt}
+    \label{eq:III.16}
+\end{equation}
+where the time derivatives are given by \eqref{eq:II.8}. This hypothesis of ``local'' equilibrium can, from a macroscopic point of view, only be justified by virtue of the validity of the conclusions derived from it. For special microscopic models it can indeed be shown that the relation \eqref{eq:III.16} is valid for deviations from equilibrium which are not ``too large''. Criteria specifying how far from equilibrium \eqref{eq:III.16} can be used may also be derived from these microscopic considerations. We shall come back to this point in Chapters VII and IX. It may already be stated here that for most familiar transport phenomena the use of \eqref{eq:III.16} is justified.
+
+In order to find the explicit form of the entropy balance equation
+\eqref{eq:III.12} we have to insert the expressions \eqref{eq:II.39}, with \eqref{eq:II.38}, for $d u / d t$ and \eqref{eq:II.13} for $d c_k / d t$ into formula \eqref{eq:III.16}. This gives
+\begin{equation}
+\rho \frac{ds}{dt} = - \frac{\textrm{div } \bm{J}_q}{T} - \frac{1}{T} \bm{\Pi} : \textrm{Grad } \bm{v} + \frac{1}{T} \sum_{k=1}^{n} \bm{J}_k \cdot \bm{F}_k + \frac{1}{T} \sum_{k=1}^{n} \mu_k \textrm{div } \bm{J}_k - \frac{1}{T} \sum_{j=1}^r J_j A_j
+    \label{eq:III.17}
+\end{equation}
+where we have introduced the so-called chemical affinities of the
+reactions $j$ ( $= 1, 2, \ldots , r$) defined by
+\begin{equation}
+A_j = \sum_{k=1}^n \nu_{kj} \mu_k
+    \label{eq:III.18}
+\end{equation}
+It is easy to cast equation \eqref{eq:III.17} into the form \eqref{eq:III.12} of a balance equation:
+\begin{equation}
+\begin{split}
+    \rho \frac{ds}{dt} = &- \textrm{div } \left( \frac{\bm{J}_q - \sum_{k} \mu_k \bm{J}_k}{T} \right) 
+- 
+\frac{1}{T^2} \bm{J}_q \cdot \textrm{grad } T \\
+&- 
+\frac{1}{T} \sum_{k=1}^{n} \bm{J}_k \cdot \left( T \textrm{grad } \frac{\mu_k}{T} - \bm{F}_k \right)
+- 
+\frac{1}{T} \bm{\Pi} : \textrm{Grad } \bm{v} - \frac{1}{T} \sum_{j=1}^r J_j A_j
+\end{split}
+    \label{eq:III.19}
+\end{equation}
+From comparison with \eqref{eq:III.12} it follows that the expressions for the entropy flux and the entropy production are given by
+\begin{equation}
+\bm{J}_s = \frac{1}{T} \left( \bm{J}_q - \sum_k \mu_k \bm{J}_k \right)
+    \label{eq:III.20}
+\end{equation}
+\begin{equation}
+\sigma = - \frac{1}{T^2} \bm{J}_q \cdot \textrm{grad } T
+- 
+\frac{1}{T} \sum_{k=1}^{n} \bm{J}_k \cdot \left( T \textrm{grad } \frac{\mu_k}{T} - \bm{F}_k \right)
+- 
+\frac{1}{T} \bm{\Pi} : \textrm{Grad } \bm{v} - \frac{1}{T} \sum_{j=1}^r J_j A_j
+    \label{eq:III.21}
+\end{equation}
+The way in which the separation of the right-hand side of \eqref{eq:III.17} into the divergence of a flux and a source tern1 has been achieved may at first sight seem to be to some extent arbitrary. The two parts of \eqref{eq:III.19} must, however, satisfy a number of requirements which determine this separation. uniquely. Thus we know that the entropy source strength $\sigma$ must be zero if the thermodynamic equilibrium conditions are satisfied within the system. Another requirement which \eqref{eq:III.21} must satisfy is that it be invariant under a Galilei transformation, since the notions of reversible and irreversible behaviour must be invariant under such a
+transformation. It is seen that \eqref{eq:III.21} satisfies automatically this requirement.
+
+Finally it may be noted that by integrating \eqref{eq:III.19} over the volume $V$ of a closed system one obtains, with the inequality of \eqref{eq:III.21},
+\begin{equation}
+\frac{d S}{d t} \geq - \int^{\Omega} \frac{\bm{J}_q}{T} \cdot d \bm{\Omega} 
+    \label{eq:III.22}
+\end{equation}
+which is equivalent with the Carnot-Clausius theorem \eqref{eq:III.5} as it should be.
+
+Let us consider in more detail the expressions \eqref{eq:III.20} and \eqref{eq:III.21} for the entropy flow $\bm{J}_s$ and the entropy production $\sigma$. The first formula shows that for open systems the entropy flow consists of two parts: one is the ``reduced'' heat flow $\bm{J}_q / T$, the other is connected with the diffusion
+flows of matter $\bm{J}_k$. The second formula demonstrates that the entropy production contains four different contributions. The first term at the right-hand side of \eqref{eq:III.21} arises from heat conduction, the second from diffusion, the third is connected to the gradients of the velocity field, giving rise to viscous flow, and the fourth is due to chemical reactions.
+
+The structure of the expression for $\sigma$ is that of a bilinear form: it consists of a sum of products of two factors. One of these factors in each term is a flow quantity (heat flow $\bm{J}_q$, diffusion flow $\bm{J}_k$, momentum flows or viscous pressure tensor $\bm{Pi}$, and chemical reaction rate $\bm{J}_j$) already introduced in the conservation laws of Chapter II. The other factor in each term is related to a gradient of an intensive state variable (gradients of ten1perature, chemical potential and velocity) and may contain the external force $\bm{F}_k$; it can also be a difference of thermodynamic state variables, viz. the chemical affinity $A_j$. These quantities
+which multiply the fluxes in the expression for the entropy production are called ``thermodynamic forces'' or ``affinities''.
+
+\section{Alternative Expressions for the Entropy Production; on different Definitions of the Heat Flow}
+
+It is convenient for a number of applications to write the entropy
+production \eqref{eq:III.21} in a different form. The thermodynamic force which multiplies the diffusion flow $\bm{J}_k$ includes a part which is proportional to the gradient of the temperature. By using the thermodynamic relation
+\begin{equation}
+T d \left( \frac{\mu_k}{T} \right) = \left( d \mu_k \right)_T - \frac{h_k}{T} dT
+    \label{eq:III.23}
+\end{equation}
+where the index $T$ indicates that the differential has to be taken at
+constant temperature, and where $h_k$ is the partial specific enthalpy of component $k$, and by introducing a new flux, defined as
+\begin{equation}
+\bm{J}'_q = \bm{J}_q - \sum_{k=1}^{n} h_k \bm{J}_k
+    \label{eq:III.24}
+\end{equation}
+the entropy production \eqref{eq:III.21} can be written as
+\begin{equation}
+\sigma = - \frac{1}{T^2} \bm{J}'_q \cdot \textrm{grad } T
+- 
+\frac{1}{T} \sum_{k=1}^{n} \bm{J}_k \cdot \left( \textrm{grad } \left( \mu_k \right)_T - \bm{F}_k \right)
+- 
+\frac{1}{T} \bm{\Pi} : \textrm{Grad } \bm{v} - \frac{1}{T} \sum_{j=1}^r J_j A_j
+    \label{eq:III.25}
+\end{equation}
+In this way the thermodynamic force conjugate to the diffusion flow
+$\bm{J}_k$ does not contain a term in grad $T$. However, the flow which is conjugate to the temperature gradient is now $\bm{J}'_q$ of formula \eqref{eq:III.24} instead of $\bm{J}_q$. From \eqref{eq:III.24} it is clear that the difference between $\bm{J}_q$ and $\bm{J}'_q$ represents a transfer of heat due to diffusion. Therefore the quantity $\bm{J}'_q$ also represents an irreversible heat flow. In fact in diffusing mixtures
+the concept of heat flow can be defined in different ways. Obviously a
+different definition of the notion of heat flux leaves all physical results unchanged. But to any particular choice corresponds a special form of the entropy production $\sigma$. It is a matter of expediency which choice is the most suitable in a particular application of the theory. The freedom of defining the heat flow in various ways, of which the possibility was indicated here in the framework of a macroscopic treatment, exists also in the microscopic theories of transport phenomena in mixtures.
+
+With the definition \eqref{eq:III.24} the entropy flow gets the form
+\begin{equation}
+\bm{J}_s = \frac{1}{T} \bm{J}'_q + \sum_{k=1}^{n} s_k \bm{J}_k
+    \label{eq:III.26}
+\end{equation}
+where $s_k = - (\mu_k - h_k)/T$ is the partial specific entropy of component $k$. Written in this way the entropy flux contains the heat flow $\bm{J}'_q$; and a transport of partial entropies with respect to the barycentric velocity $\bm{v}$.
+
+Still a different form of the entropy production can be obtained by
+using the equality
+\begin{equation}
+T \textrm{grad } \left( \frac{\mu_k}{T} \right) = \textrm{grad } \mu_k - \left( \frac{\mu_k}{T} \right) \textrm{grad } T
+    \label{eq:III.27}
+\end{equation}
+and the definition \eqref{eq:III.20} of the entropy flow:
+\begin{equation}
+T \sigma = - \bm{J}_s \cdot \textrm{grad } T  - \sum_{k=1}^{n} \bm{J}_k \cdot \left( \textrm{grad } \mu_k - \bm{F}_k \right) - \bm{\Pi} : \textrm{Grad } \bm{v} - \sum_{j=1}^r J_j A_j
+\label{eq:III.28}
+\end{equation}
+It is seen that in this way the force conjugate to the diffusion flow $\bm{J}_k$ contains simply a gradient of the chemical potential $\mu_k$. Since [cf. \eqref{eq:II.20}]
+\begin{equation}
+\bm{F}_k = - \textrm{grad } \psi_k
+    \label{eq:III.29}
+\end{equation}
+we may write, by introducing the quantity
+\begin{equation}
+\Tilde{\mu_k} = \mu_k + \psi_k
+    \label{eq:III.30}
+\end{equation}
+instead of (28)
+\begin{equation}
+T \sigma = - \bm{J}_s \cdot \textrm{grad } T  - \sum_{k=1}^{n} \bm{J}_k \cdot \textrm{grad } \Tilde{\mu}_k  - \bm{\Pi} : \textrm{Grad } \bm{v} - \sum_{j=1}^r J_j A_j
+    \label{eq:III.31}
+\end{equation}
+In the case of an electrostatic potential energy, $\psi_k$ is equal to $z_k \phi$ with $z_k$ the charge per unit mass of component $k$, and $\phi$ the electrostatic potential, and $\Tilde{\mu_k}$ is then the electrochemical potential. Quite in general it can be said that in the form \eqref{eq:III.28} of the entropy production $\sigma$, where
+the entropy flow $\bm{J}_s$ is employed, the thermodynamic force conjugate to the diffusion flow can be written as the gradient of a single quantity, if the force $\bm{F}_k$ is conservative (e.g. an electrostatic or a gravitational force). This is the reason why the form \eqref{eq:III.28} is of special advantage in applications, dealing with electric processes.
+
+\section{Kinetic Energy of Diffusion}
+In Chapter II, Section 4, we have defined the internal energy $u$ by equation \eqref{eq:II.32}, i.e. by subtracting from the total energy $e$ the potential energies of all components $\psi = \sum_k c_k \psi_k$ and the barycentric kinetic energy $\frac{1}{2} \bm{v}^2$. This means that the internal energy $u$ still contains the macroscopic
+kinetic energy of the components with respect to the centre of gravity
+motion. It is possible to define a different internal energy per unit
+mass $u^*$, by subtracting from the total energy $e$, the potential energies and the kinetic energies of all components
+\begin{equation}
+u^* = e - \sum_k c_k \psi_k - \sum_k \frac{1}{2} c_k \bm{v}_k^2 = u - \sum_k \frac{1}{2} c_k (\bm{v}_k - \bm{v})^2
+    \label{eq:III.32}
+\end{equation}
+where \eqref{eq:II.7} and \eqref{eq:II.32} have been used. Since the internal energy should only contain contributions from the thermal agitation and the short-range molecular interactions, the quantity $u^*$ has perhaps more right to this name than the quantity $u$. In equilibrium the Gibbs relation \eqref{eq:III.15} is in fact a relation between the entropy $s$ and the quantities $u^*$, $v$ and $c_k$, since in equilibrium diffusion fluxes must vanish. Therefore \eqref{eq:III.15} should read
+\begin{equation}
+T ds = du^* + pdv - \sum_{k=1}^n \mu_k^* d c_k
+    \label{eq:III.33}
+\end{equation}
+where we have introduced the chemical potential $\mu_k^*$ related to $u^*$ by
+\begin{equation}
+\sum_k c_k \mu_k^* = u^* - Ts + pv
+    \label{eq:III.34}
+\end{equation}
+In agreement with the hypothesis of local equilibrium one should
+therefore assume \eqref{eq:III.33} to hold outside equilibrium in the form
+\begin{equation}
+T \frac{d s}{d t} = \frac{d u^*}{d t} + p \frac{d v}{d t} - \sum_{k=1}^n \mu_k^* \frac{d c_k}{d t}
+    \label{eq:III.35}
+\end{equation}
+instead of \eqref{eq:III.16}.
+
+Introducing into this equation the relation \eqref{eq:III.32}, one obtains, with \eqref{eq:II.9}
+\begin{equation}
+T \frac{d s}{d t} = \frac{d u}{d t} + p \frac{d v}{d t} - \sum_{k=1}^n \mu_k \frac{d c_k}{d t} - \rho^{-1} \sum_{k=1}^n \bm{J}_k \cdot \frac{d (\bm{v}_k - \bm{v})}{dt}
+    \label{eq:III.36}
+\end{equation}
+where $\mu_k$ is related to $\mu_k^*$ by
+\begin{equation}
+\mu_k = \mu_k^* + \frac{1}{2} (\bm{v}_k - \bm{v})^2
+    \label{eq:III.37}
+\end{equation}
+and to $u$ by the relation analogous to \eqref{eq:III.34}
+\begin{equation}
+\sum_k c_k \mu_k = u - Ts + pv
+    \label{eq:III.38}
+\end{equation}
+
+It is seen that \eqref{eq:III.36} and \eqref{eq:III.16} are identical if $d(\bm{v}_k - \bm{v})/dt$ vanishes, i.e. if the substantial time derivative of the velocities of the various components with respect to the barycentric motion may be neglected. We shall see later that frequently this may indeed be done. The use of \eqref{eq:III.16}
+is then justified.
+From \eqref{eq:III.36} one obtains, using \eqref{eq:II.39}, \eqref{eq:II.38} and \eqref{eq:II.13}, the entropy balance equation, which reads now
+\begin{equation}
+\begin{split}
+    \rho \frac{ds}{dt} = &- \textrm{div } \left( \frac{\bm{J}_q - \sum_{k} \mu_k \bm{J}_k}{T} \right) 
+- 
+\frac{1}{T^2} \bm{J}_q \cdot \textrm{grad } T \\
+&- 
+\frac{1}{T} \sum_{k} \bm{J}_k \cdot \left( T \textrm{grad } \frac{\mu_k}{T} - \bm{F}_k 
++ \frac{d (\bm{v}_k - \bm{v})}{d T}\right)
+- 
+\frac{1}{T} \bm{\Pi} : \textrm{Grad } \bm{v} - \frac{1}{T} \sum_{j=1}^r J_j A_j
+\end{split}
+    \label{eq:III.39}
+\end{equation}
+This equation is identical with \eqref{eq:III.19} except for the inclusion of an ``inertia term'' in the thermodynamic force of diffusion. Examples in which such ``inertia terms'' must be retained will be considered later.
+

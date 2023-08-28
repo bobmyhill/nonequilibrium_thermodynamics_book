@@ -1,0 +1,79 @@
+% book example for classicthesis.sty
+\documentclass[11pt,a4paper,footinclude=true,headinclude=true]{scrbook} % KOMA-Script book
+\usepackage[T1]{fontenc}                
+\usepackage{lipsum}
+\usepackage[linedheaders,parts,pdfspacing]{classicthesis} % ,manychapters
+\usepackage[total={15cm,25cm}, top=3cm, left=2cm, includefoot]{geometry}
+%\usepackage[osf]{libertine}
+\usepackage{amsthm}
+\usepackage{siunitx}
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+\DeclareMathOperator{\Tr}{Tr}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{bm}
+\usepackage[bb=boondox]{mathalfa} % required for mathbb{0}
+
+\begin{document}
+    %\titlehead{Head of titlepage}
+    %\subject{SUBJECT}
+    \title{Non-equilibrium Thermodynamics}
+    %\subtitle{A big conclusion of \LaTeX}
+    \author{S. R. de Groot \and P. Mazur\thanks{Typeset by Bob Myhill using \LaTeX. Last updated \today.}}
+    \date{1984}
+    \publishers{Originally published by DOVER PUBLICATIONS, INC., NEW YORK}
+    \maketitle
+    
+	\pagestyle{scrheadings}
+%	\manualmark
+	\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+	
+	\tableofcontents 
+
+%	\automark[section]{chapter}
+%	\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+%	\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+
+    % use \cleardoublepage here to avoid problems with pdfbookmark
+    \include{01_introduction}
+    
+    \cleardoublepage\part{General Theory}
+    \include{02_conservation_laws}
+    \include{03_entropy}
+    \include{04_phenomenological_equations}
+    \include{05_stationary_states}
+    \include{06_properties}
+    \include{07_statistical_foundations}
+    \include{08_fluctuation_dissipation}
+    \include{09_kinetic_theory}
+
+    \cleardoublepage\part{Applications}
+    \include{10_chemical_reactions}
+    \include{11_diffusion}
+    \include{12_flow}
+    \include{13_electrical_conduction}
+    \include{14_polarized_systems}
+    \include{15_discontinuous_systems}
+    
+
+%	\include{multiToC}
+
+    \appendix
+    \cleardoublepage\part{Appendix}
+    \chapter{On matrix and tensor notation}
+    \chapter{On thermodynamic relations}
+    \chapter{The Gaussian distribution for macroscopic variables}
+    
+    \cleardoublepage\part{Problems}
+    
+%    \lipsum[1]
+    
+%    \section{A Section}
+%    \lipsum[1]
+
+\end{document}

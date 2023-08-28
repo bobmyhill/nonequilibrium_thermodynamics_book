@@ -1,0 +1,424 @@
+\chapter{The Phenomenological Equations}
+
+\section{The Linear Laws}
+In the preceding chapter it has already been mentioned that the expression for the entropy production $\sigma$ vanishes, when the thermodynamic equilibrium conditions are satisfied, i.e. when the (independent) thermodynamic forces are zero. In conformity with the concept of equilibrium we also require that all fluxes in $u$ vanish simultaneously with the thermodynamic forces.
+
+It is known empirically that for a large class of irreversible phenomena and under a wide range of experimental conditions, the irreversible flows are linear functions of the thermodynamic forces, as expressed by the phenomenological laws which are introduced ad hoc in the purely phenomenological theories of irreversible processes. Thus, e.g. Fourier's law for heat conduction expresses that the components of the heat flow are linear functions of the components of the temperature gradient, and Fick's law establishes a linear relation between the diffusion flow of matter and the concentration gradient. Also included in this kind of description are the laws for such cross-phenomena as thermal diffusion, in which the diffusion flow depends linearly on both the concentration and temperature gradients. If we restrict ourselves to this linear region we may write quite generally 
+\begin{equation}
+J_i = \sum_k L_{ik} X_k
+    \label{eq:IV.1}
+\end{equation}
+where $J_i$ and $X_i$ are any of the Cartesian components of the independent fluxes and thermodynamic forces appearing in the expression for the entropy production [cf. e.g. (III.21)], which is of the form $\sigma = \sum_i J_iX_i$.
+
+The quantities $L_{ik}$ are called the phenomenological coefficients and the relations \eqref{eq:IV.1} will be referred to as the phenomenological equations. It is clear that this scheme includes the examples mentioned above.
+
+If one introduces the phenomenological equations into the expression for the entropy production $\sigma$, one gets a quadratic expression in the thermodynamic forces of the form $\sum_{i,k} L_{ik} X_i X_k$ which, since one has $\sigma \geq 0$, must be positive definite or at least non-negative definite. A sufficient condition for this is that all principal co-factors of the symmetric matrix with elements $L_{ik} + L_{ki}$ are positive (or at least non-negative). This implies that all diagonal elements are positive whereas the off-diagonal elements must satisfy, for instance, conditions of the form $L_{ii}L_{kk} \geq 0.25 (L_{ik} + L_{ki})^2$.
+
+With the help of the relations \eqref{eq:IV.1} it is now possible, using the conservation laws and balance equations of Chapters II and III, to determine in principle the evolution in time  of all local thermodynamic state variables of the system. This is one of the advantages of the systematic formulation of thermodynamics of irreversible processes. On the other hand this formulation will also enable us to derive some important relationships which exist between the phenomenological coefficients (cf. Section 3).
+
+It is very well possible that some irreversible processes must be described by non-linear phenomenological laws. Such processes lie outside the scope of the present theory. However, even for such processes one may assume the linear relations to be valid within a very limited range close to equilibrium. Thus ordinary transport phenomena like heat conduction and electric conduction are linear even under rather extreme experimental conditions, whereas chemical reactions must nearly always be described by non-linear laws.
+
+In the following sections the linear laws \eqref{eq:IV.1} will be given in explicit form for the systems studied in the preceding chapters, and the general properties of the matrix $L_{ik}$ of phenomenological coefficients will be studied.
+
+\section{Influence of Symmetry Properties of Matter on the Linear Laws: Curie Principle}
+
+Before stating in this section the influence of the symmetry properties of matter on the phenomenological equations \eqref{eq:IV.1}, we wish to write the entropy production \eqref{eq:III.21}, \eqref{eq:III.25} or \eqref{eq:III.31} in a slightly
+different form.
+
+Let us split up the symmetric viscous pressure tensor $\bm{P}$ and the tensor $\textrm{Grad } \bm{v}$ in the following way\footnote{The original symbology in this section is at odds with Chapter 3. Here I replace the odd symbology with that of Chapter 3.}
+
+\begin{equation}
+\bm{P} = p\bm{U} + \bm{\Pi}
+    \label{eq:IV.2}
+\end{equation}
+\begin{equation}
+\textrm{Grad } \bm{v} = \frac{1}{3} (\textrm{div } \bm{v}) \bm{U} + \mathring{\textrm{Grad } \bm{v}}
+    \label{eq:IV.3}
+\end{equation}
+where the quantity $p$ is given by
+\begin{equation}
+p = \frac{1}{3} \bm{P} : \bm{U}
+    \label{eq:IV.4}
+\end{equation}
+that is, as one third of the trace of the viscous pressure tensor. Similarly div $\bm{v}$ the trace of $\textrm{Grad } \bm{v}$ [cf. (11.37)]:
+\begin{equation}
+\textrm{div } \bm{v} = (\textrm{Grad } \bm{v}) : \bm{U}
+    \label{eq:IV.5}
+\end{equation}
+The tensors $\bm{\Pi}$ and $\mathring{\textrm{Grad } \bm{v}}$ defined by \eqref{eq:IV.2} and \eqref{eq:IV.3} have zero trace according to \eqref{eq:IV.4} and \eqref{eq:IV.5}:
+\begin{equation}
+\bm{\Pi} : \bm{U} = 0
+    \label{eq:IV.6}
+\end{equation}
+\begin{equation}
+\mathring{\textrm{Grad } \bm{v}} : \bm{U} = 0
+    \label{eq:IV.7}
+\end{equation}
+For the scalar product of \eqref{eq:IV.2} and \eqref{eq:IV.3}, one finds with the help of \eqref{eq:IV.6} and \eqref{eq:IV.7}
+\begin{equation}
+\bm{P} : \textrm{Grad } \bm{v} = \bm{\Pi} : \mathring{\textrm{Grad } \bm{v}} + p \textrm{div } \bm{v}
+    \label{eq:IV.8}
+\end{equation}
+The tensor $\mathring{\textrm{Grad } \bm{v}}$ can be split into a symmetric and an antisymmetric part
+\begin{equation}
+\mathring{\textrm{Grad } \bm{v}} = (\mathring{\textrm{Grad } \bm{v}} )^s + (\mathring{\textrm{Grad } \bm{v}} )^a
+    \label{eq:IV.9}
+\end{equation}
+with 
+\begin{equation}
+(\mathring{\textrm{Grad } \bm{v}} )^s = 
+\frac{1}{2} \left( \frac{\partial v_{\beta}}{\partial x_{\alpha}} + \frac{\partial v_{\alpha}}{\partial x_{\beta}} \right)
+- 
+\frac{1}{3} \delta_{\alpha \beta} \sum_{\gamma} \frac{\partial v_{\gamma}}{\partial x_{\gamma}}
+    \label{eq:IV.10}
+\end{equation}
+\begin{equation}
+(\mathring{\textrm{Grad } \bm{v}} )^a = \frac{1}{2} \left( \frac{\partial v_{\beta}}{\partial x_{\alpha}} - \frac{\partial v_{\alpha}}{\partial x_{\beta}} \right)
+    \label{eq:IV.11}
+\end{equation}
+
+Using \eqref{eq:IV.9} the result \eqref{eq:IV.8} becomes
+\begin{equation}
+\bm{P} : \textrm{Grad } \bm{v} = \bm{\Pi} : (\mathring{\textrm{Grad } \bm{v}} )^s +
+p \textrm{div } \bm{v}
+    \label{eq:IV.12}
+\end{equation}
+since the doubly contracted product of a symmetric and an antisymmetric tensor vanishes.
+
+If one introduces \eqref{eq:IV.12} into the form \eqref{eq:III.25} of the entropy production and eliminates $\bm{J}_n$ with the help of \eqref{eq:II.15}, one obtains
+\begin{equation}
+\begin{split}
+    \sigma = &- \frac{1}{T^2} \bm{J}'_q \cdot \textrm{grad } T - \frac{1}{T} \sum_{k=1}^{n-1} \bm{J}_k \cdot ((\textrm{grad } (\mu_k - \mu_n))_T - \bm{F}_k + \bm{F}_n)  \\
+    &- \frac{1}{T} \bm{\Pi}: (\mathring{\textrm{Grad } \bm{v}})^s - \frac{1}{T} p \textrm{div } \bm{v} - \frac{1}{T} \sum_{j=1}^{r} J_j A_j \geq 0
+\end{split}
+    \label{eq:IV.13}
+\end{equation}
+
+The total contribution of viscous phenomena to the entropy production has thus been split up into two parts. The second part, $-(1/T) p \textrm{div } \bm{v}$, is related to the rate of change of specific volume. This is the part which is due to bulk viscosity.
+
+We shall now establish the phenomenological equations \eqref{eq:IV.1} between the independent fluxes and thermodynamic forces of this expression. In principle any Cartesian component of a flux can be a linear function of the Cartesian components of all thermodynamic forces. We note, however, that the fluxes and the thermodynamic forces of \eqref{eq:IV.13} do not all have the same tensorial character: some are scalars, some are vectors and one is a tensor (of second rank). This means that under rotations and reflections the Cartesian components of these quantities transform in different ways. As a consequence symmetry properties of the material system considered may have the effect that the components of the fluxes do not depend on all components of the thermodynamic forces. This fact is often referred to as the Curie symmetry principle. Thus, in particular for an isotropic system (i.e. a system of which the properties at equilibrium ate the same in all directions) it can be shown that fluxes and thermodynamic forces of different tensorial character do not couple. The proof of this statement will be given in Chapter VI, where we shall study in a more formal way the influence of symmetry elements on the coupling of fluxes. and thermodynamic forces. For an isotropic system the phenomenological equations read
+\begin{equation}
+\bm{J}'_q = - L_{qq} (\textrm{grad } T)/T^2 - \sum_{k=1}^{n-1} L_{qk} ((\textrm{grad } (\mu_k - \mu_n))_T - \bm{F}_k + \bm{F}_n)/T
+    \label{eq:IV.14}
+\end{equation}
+\begin{equation}
+\bm{J}_i = - L_{iq} (\textrm{grad } T)/T^2 - \sum_{k=1}^{n-1} L_{ik} ((\textrm{grad } (\mu_k - \mu_n))_T - \bm{F}_k + \bm{F}_n)/T
+    \label{eq:IV.15}
+\end{equation}
+\begin{equation}
+\bm{\Pi}_{\alpha \beta} = -\frac{L}{T} (\mathring{\textrm{Grad } \bm{v}})_{\alpha \beta}^s
+    \label{eq:IV.16}
+\end{equation}
+\begin{equation}
+p = -l_{vv} (\textrm{div } \bm{v})/T - \sum_{m=1}^r l_{vm} A_m / T
+\label{eq:IV.17}
+\end{equation}
+\begin{equation}
+J_j = -l_{jv} (\textrm{div } \bm{v}) / T - \sum_{m=1}^r l_{jm} A_m / T
+    \label{eq:IV.18}
+\end{equation}
+Equations \eqref{eq:IV.14} and \eqref{eq:IV.15} describe the vectorial phenomena of heat conduction, diffusion and their cross-effects. The coefficients $L_{qq}$, $L_{qk}$, $L_{iq}$ and $L_{ik}$ (i, k = 1,2, ... , n) are scalar quantities. This is also a consequence of the isotropy of the system. Equations \eqref{eq:IV.16} relate the Cartesian components of the pressure tensor $\bm{\tau}$ to the components of the symmetric tensor $\dot{\bm{\varepsilon}}$. Due to the isotropy of the system only corresponding tensor components $\alpha$, $\beta$ are linearly related with each other by means of the same coefficient $L$. Finally equations \eqref{eq:IV.17} and \eqref{eq:IV.18} describe the scalar processes of bulk viscosity and chemistry and their possible cross-phenomena.
+
+Another consequence of the fact that in isotropic media fluxes and thermodynamic forces of different tensorial character do not interfere, is that the entropy production \eqref{eq:IV.13} falls apart into three contributions, which are separately positive definite
+\begin{equation}
+\sigma_0 = -\frac{1}{T} p \textrm{div } \bm{v} - \frac{1}{T} \sum_{j=1}^r J_j A_j \geq 0
+    \label{eq:IV.19}
+\end{equation}
+
+\begin{equation}
+\sigma_1 = - \frac{1}{T^2} \bm{J}'_q \cdot \textrm{grad } T - \frac{1}{T} \sum_{k=1}^{n-1} \bm{J}_k \cdot ((\textrm(\mu_k - \mu_n))_T - \bm{F}_k + \bm{F}_n) \geq 0
+\label{eq:IV.20}
+\end{equation}
+
+\begin{equation}
+\sigma_2 = - \frac{1}{T} \bm{\Pi} : (\mathring{\textrm{Grad } \bm{v}})^s \geq 0
+    \label{eq:IV.21}
+\end{equation}
+
+This can be concluded when the phenomenological equations \eqref{eq:IV.14}-\eqref{eq:IV.18} are substituted into \eqref{eq:IV.13}.
+
+We shall also write down the general form of the phenomenological equations in anisotropic crystals in which no chemical reactions occur. Since in such systems no viscous flows exist, we are left with the phenomena of heat conduction, diffusion and their cross-effects. The phenomenological equations corresponding to this case are
+\begin{equation}
+\bm{J}'_q = - \bm{L}_{qq} \cdot (\textrm{grad } T) / T^2 - \sum_{k=1}^{n-1} \bm{L}_{qk} \cdot ((\textrm{grad }(\mu_k - \mu_n))_T - \bm{F_k} + \bm{F_n})/T
+    \label{eq:IV.22}
+\end{equation}
+\begin{equation}
+\bm{J}_i = - \bm{L}_{iq} \cdot (\textrm{grad } T) / T^2 - \sum_{k=1}^{n-1} \bm{L}_{ik} \cdot ((\textrm{grad }(\mu_k - \mu_n))_T - \bm{F_k} + \bm{F_n})/T
+    \label{eq:IV.23}
+\end{equation}
+The quantities $\bm{L}_{qq}$, $\bm{L}_{qk}$, $\bm{L}_{iq}$ and $\bm{L}_{ik}$ are tensors. For instance $L_{qq}$ is related to the heat conduction tensor. The form of these tensors depends on the symmetry elements of the system. We have seen above that in isotropic - media all tensors in \eqref{eq:IV.22} and \eqref{eq:IV.23} reduce to scalar multiples of the unit tensor. This is also the case in crystals with cubic symmetry. Since the isotropic fluid and the anisotropic crystal are in actual physical applications the two most frequently encountered types of systems, we have confined the discussion of the influence of symmetry properties of matter on the phenomenological laws to these two cases.
+
+\section{The Onsager Reciprocal Relations}
+
+In the preceding section we have considered the influence of spatial symmetry on the phenomenological equations. In this section we shall discuss the influence of the property of ``time reversal invariance'' of the equations of motion of the individual particles, of which the system consists, on the phenomenological equations. This property of ``time reversal invariance'' expresses the fact that the mechanical equations of motion (classical as well as quantum mechanical) of the particles are symmetric with respect to the time. It implies that the particles retrace their former paths if all velocities are reversed.
+
+From this microscopic property one may conclude to a macroscopic theorem, due to Onsager. In this section we shall state the content of this theorem. In Chapter VII the derivation of this theorem is discussed.
+
+Let us consider an adiabatically insulated system. We shall first take the case that no external magnetic field acts on the system. The state of the system can be described by a number of independent parameters.
+
+These parameters may be of two types. Some of these are even functions of the particle velocities (one may think, for instance, of local energies, concentrations, etc.). These are denoted by $A_1$, $A_2$, ..., $A_n$. The other parameters are odd functions of the particle velocities (e.g. momentum densities), and are denoted by $B_1$, $B_2$, ..., $B_m$. The equilibrium values of these variables are $A_1^0$, $A_2^0$, ..., $A_n^0$ and $B_1^0$, $B_2^0$, ..., $B_m^0$. The deviations of all these parameters from their equilibrium values are given by
+\begin{equation}
+\alpha_i = A_i - A_i^0
+    \label{eq:IV.24}
+\end{equation}
+
+\begin{equation}
+\beta_i = B_i - B_i^0
+    \label{eq:IV.25}
+\end{equation}
+At equilibrium the entropy has a maximum, and the state variables $\alpha_1$, $\alpha_2$, ..., $\alpha_n$ and $\beta_1$, $\beta_2$, ..., $\beta_m$ are zero by definition; this means that for a non-equilibrium state one can write for the deviation $\Delta S$ of the entropy from its equilibrium value, as a first approximation, a quadratic expression in the state variables $\alpha_1$, $\alpha_2$, ..., $\alpha_n$ and $\beta_1$, $\beta_2$, ..., $\beta_m$:
+\begin{equation}
+\Delta S = - \frac{1}{2} \sum_{i,k}^n g_{ik} \alpha_k \alpha_i - \frac{1}{2} \sum_{i,k}^m h_{ik} \beta_k \beta_i
+    \label{eq:IV.26}
+\end{equation}
+where $g_{ik}$ (i, k = 1, 2, ... , n) and $h_{ik}$ (i, k = 1, 2, ... , m), the second derivatives of $\Delta S$ with respect to the $\alpha$ and $\beta$-variables, are positive definite matrices. In the absence of an external magnetic field no cross-terms between $\alpha$- and $\beta$-type variables occur in \eqref{eq:IV.26} since $\Delta S$ must be an even function of the particle velocities.
+
+It is assumed that the time behaviour of the state parameters can be described by linear phenomenological equations of the type
+\begin{equation}
+\frac{d \alpha_i}{d t} = - \sum_{k=1}^n M_{ik}^{(\alpha \alpha)} \alpha_k - \sum_{k=1}^m M_{ik}^{(\alpha \beta)} \beta_k 
+    \label{eq:IV.27}
+\end{equation}
+\begin{equation}
+\frac{d \beta_i}{d t} = - \sum_{k=1}^n M_{ik}^{(\beta \alpha)} \alpha_k - \sum_{k=1}^m M_{ik}^{(\beta \beta)} \beta_k
+    \label{eq:IV.28}
+\end{equation}
+where the $M_{ik}^{\alpha \alpha}$, $M_{ik}^{\alpha \beta}$, $M_{ik}^{\beta \alpha}$, $M_{ik}^{\beta \beta}$ are the phenomenological coefficients. Onsager's theorem establishes a number of relations between these coefficients, viz.,
+\begin{equation}
+\sum_{k=1}^n M_{ik}^{(\alpha \alpha)} g_{kj}^{-1} = \sum_{k=1}^n M_{jk}^{(\alpha \alpha)} g_{ki}^{-1}
+    \label{eq:IV.29}
+\end{equation}
+\begin{equation}
+\sum_{k=1}^n M_{ik}^{(\alpha \beta)} g_{kj}^{-1} = - \sum_{k=1}^n M_{jk}^{(\beta \alpha)} g_{ki}^{-1}
+    \label{eq:IV.30}
+\end{equation}
+\begin{equation}
+\sum_{k=1}^n M_{ik}^{(\beta \beta)} g_{kj}^{-1} = \sum_{k=1}^n M_{jk}^{(\beta \beta)} g_{ki}^{-1}
+    \label{eq:IV.31}
+\end{equation}
+where the $g_{ik}^{-1}$ and $h_{ik}^{-1}$ are the reciprocal matrices of the $g_{ik}$ and $h_{ik}$. These relations, which express the content of Onsager's theorem, can be written in a somewhat more transparent form, by writing the phenomenological equations \eqref{eq:IV.27} and \eqref{eq:IV.28} in a different fashion. To this purpose let us introduce the following linear combinations of the state parameters
+\begin{equation}
+X_i = \frac{\partial \Delta S}{\partial \alpha_i} = - \sum_{k=1}^n g_{ik} \alpha_k
+    \label{eq:IV.32}
+\end{equation}
+\begin{equation}
+Y_i = \frac{\partial \Delta S}{\partial \beta_i} = - \sum_{k=1}^m h_{ik} \beta_k
+    \label{eq:IV.33}
+\end{equation}
+
+Solving for the $\alpha_i$ and $\beta_i$ we obtain
+\begin{equation}
+\alpha_i = - \sum_{k=1}^n g_{ik}^{-1} X_k
+    \label{eq:IV.34}
+\end{equation}
+\begin{equation}
+\beta_i = - \sum_{k=1}^m h_{ik}^{-1} Y_k
+    \label{eq:IV.35}
+\end{equation}
+
+Introducing \eqref{eq:IV.34} and \eqref{eq:IV.35} into \eqref{eq:IV.27} and \eqref{eq:IV.28}, these relations become
+\begin{equation}
+\frac{d \alpha_i}{d t}
+=
+\sum_{k=1}^n
+L_{ik}^{(\alpha \alpha)}
+X_k
++
+\sum_{k=1}^m
+L_{ik}^{(\alpha \beta)}
+Y_k
+    \label{eq:IV.36}
+\end{equation}
+\begin{equation}
+\frac{d \beta_i}{d t}
+=
+\sum_{k=1}^n
+L_{ik}^{(\beta \alpha)}
+X_k
++
+\sum_{k=1}^m
+L_{ik}^{(\beta \beta)}
+Y_k
+    \label{eq:IV.37}
+\end{equation}
+where the coefficients are given by
+\begin{equation}
+L_{ik}^{(\alpha \alpha)}
+=
+\sum_{j=1}^n
+M_{ij}^{(\alpha \alpha)}
+g_{jk}^{-1}
+    \label{eq:IV.38}
+\end{equation}
+\begin{equation}
+L_{ik}^{(\alpha \beta)}
+=
+\sum_{j=1}^m
+M_{ij}^{(\alpha \beta)}
+h_{jk}^{-1}
+    \label{eq:IV.39}
+\end{equation}
+\begin{equation}
+L_{ik}^{(\beta \alpha)}
+=
+\sum_{j=1}^n
+M_{ij}^{(\beta \alpha)}
+g_{jk}^{-1}
+    \label{eq:IV.40}
+\end{equation}
+\begin{equation}
+L_{ik}^{(\beta \beta)} 
+=
+\sum_{j=1}^m
+M_{ij}^{(\beta \beta)} 
+h_{jk}^{-1}
+    \label{eq:IV.41}
+\end{equation}
+With the help of these quantities, the Onsager relations \eqref{eq:IV.29}-\eqref{eq:IV.31} become
+\begin{equation}
+L_{ik}^{(\alpha \alpha)} = L_{ki}^{(\alpha \alpha)}
+    \label{eq:IV.42}
+\end{equation}
+\begin{equation}
+L_{ik}^{(\alpha \beta)} = -L_{ki}^{(\beta \alpha)}
+    \label{eq:IV.43}
+\end{equation}
+\begin{equation}
+L_{ik}^{(\beta \beta)} = L_{ki}^{(\beta \beta)}
+    \label{eq:IV.44}
+\end{equation}
+In this simple form they are usually referred to as Onsager's reciprocal relations.
+
+To summarize the results it can be said that the Onsager relations \eqref{eq:IV.44}-\eqref{eq:IV.42} are valid for the coefficients of the phenomenological equations, if the independent ``fluxes'' $J_i$ and $I_i$
+\begin{equation}
+J_i = \frac{d \alpha_i}{d t}
+    \label{eq:IV.45}
+\end{equation}
+\begin{equation}
+I_i = \frac{d \beta_i}{d t}
+    \label{eq:IV.46}
+\end{equation}
+are written as linear functions of the independent ``thermodynamic forces'' $X_i$ and $Y_i$ which are the derivatives of the entropy with respect to $\alpha_i$ and $\beta_i$
+respectively
+\begin{equation}
+X_i = \frac{\partial \Delta S}{\partial \alpha_i}
+    \label{eq:IV.47}
+\end{equation}
+\begin{equation}
+Y_i = \frac{\partial \Delta S}{\partial \beta_i}
+    \label{eq:IV.48}
+\end{equation}
+The Onsager relations hold in the form \eqref{eq:IV.42}-\eqref{eq:IV.44} if no external magnetic field $\bm{B}$ is present. In the presence of an external magnetic field the property of ``time reversal invariance'' implies that the particles retrace their former paths only if both the particle velocities and the magnetic field are reversed. This follows from the form of the expression for the Lorentz force, which is proportional to the vector product of the particle velocity and the magnetic field. A similar situation arises in rotating systems. Then the particles retrace their former paths if both their velocities and the angular velocity were reversed, since the particles are then subjected to the so-called Coriolis force which is proportional to the vector product of the particle velocity and the angular velocity. As a consequence the Onsager relations \eqref{eq:IV.42}-\eqref{eq:IV.44} must be modified to read\footnote{It should be noted that in the presence of a magnetic field the thermodynamic forces \eqref{eq:IV.47} and \eqref{eq:IV.48} are not given by the  last members of \eqref{eq:IV.32} and \eqref{eq:IV.33} since the entropy as may then contain cross-terms between $\alpha$- and $\beta$-variables (the entropy must be invariant for a reversal of both the particle velocities and the magnetic
+field, cf. Chapter VII).}:
+\begin{equation}
+L_{ik}^{(\alpha \alpha)} (\bm{B}, \bm{\omega}) = L_{ki}^{(\alpha \alpha)} (-\bm{B}, -\bm{\omega})
+    \label{eq:IV.49}
+\end{equation}
+\begin{equation}
+L_{ik}^{(\alpha \beta)} (\bm{B}, \bm{\omega}) = -L_{ki}^{(\beta \alpha)} (-\bm{B}, -\bm{\omega})
+    \label{eq:IV.50}
+\end{equation}
+\begin{equation}
+L_{ik}^{(\beta \beta)} (\bm{B}, \bm{\omega}) = L_{ki}^{(\beta \beta)} (-\bm{B}, -\bm{\omega})
+    \label{eq:IV.51}
+\end{equation}
+
+It is interesting to write down the time derivative of the entropy \eqref{eq:IV.26}, i.e. the entropy production, due to the irreversible processes occurring in the system:
+\begin{equation}
+\frac{d \Delta S}{d t} = - \sum_{i,k} g_{ik} \alpha_k \frac{d \alpha_i}{dt} - \sum_{i,k} h_{ik} \beta_k \frac{d \beta_i}{dt} 
+    \label{eq:IV.52}
+\end{equation}
+and therefore with \eqref{eq:IV.32}, \eqref{eq:IV.33} and \eqref{eq:IV.45}, \eqref{eq:IV.46}:
+\begin{equation}
+\frac{d \Delta S}{d t} = \sum_{i=1}^n J_i X_i + \sum_{i=1}^m I_i Y_i
+    \label{eq:IV.53}
+\end{equation}
+The entropy production is therefore a bilinear expression in the fluxes and thermodynamic forces appearing in the phenomenological equations for which the Onsager relations hold. The calculations of the entropy production therefore affords a means of finding the proper ``conjugate'' irreversible fluxes and thermodynamic forces necessary for the establishment of phenomenological equations of which the coefficients obey the Onsager relations \eqref{eq:IV.42}-\eqref{eq:IV.44} or \eqref{eq:IV.49}-\eqref{eq:IV.51}.
+
+Although the fluxes in the local entropy production $\sigma$, calculated in the preceding chapter and used in section 2 of this chapter, are not necessarily time derivatives of state variables as the fluxes \eqref{eq:IV.45} and \eqref{eq:IV.46} in \eqref{eq:IV.53}, or in other words, although the local entropy production $\sigma$ is not a total time derivative such as \eqref{eq:IV.52} is, it can be shown that the phenomenological coefficients appearing in the linear laws established between fluxes and thermodynamic forces of the local entropy production also obey the reciprocal relations \eqref{eq:IV.42}-\eqref{eq:IV.44} or \eqref{eq:IV.49}-\eqref{eq:IV.51}. The formal proof of this statement will be given in Chapter VI.
+
+Thus the following relations exist amongst the coefficients of the phenomenological laws \eqref{eq:IV.14}-\eqref{eq:IV.18} of the isotropic fluid (in the absence
+of a magnetic field)
+\begin{equation}
+L_{qi} = L_{iq} 
+    \label{eq:IV.54}
+\end{equation}
+\begin{equation}
+L_{ik} = L_{ki} 
+    \label{eq:IV.55}
+\end{equation}
+\begin{equation}
+l_{vj} = -l_{jv} 
+    \label{eq:IV.56}
+\end{equation}
+\begin{equation}
+l_{jm} = l_{mj} 
+    \label{eq:IV.57}
+\end{equation}
+
+Relation \eqref{eq:IV.56} is an example of \eqref{eq:IV.43} since it describes a cross-effect between an $\alpha$- and a $\beta$-type variable; the chemical affinity $A$ and the divergence of the velocity $\bm{v}$ respectively. The symmetry relations \eqref{eq:IV.54}-\eqref{eq:IV.57} establish a number of connections between otherwise independent irreversible processes. One of the objectives of non-equilibrium thermodynamics is to study the physical consequences of such relations (see part B).
+
+For the coefficients of the phenomenological laws \eqref{eq:IV.22} and \eqref{eq:IV.23} of the anisotropic crystal the reciprocal relations, in the presence of a magnetic field, are
+\begin{equation}
+L_{qq} (\bm{B}) = \Tilde{L}_{qq} (-\bm{B})
+    \label{eq:IV.58}
+\end{equation}
+\begin{equation}
+L_{qi} (\bm{B}) = \Tilde{L}_{iq} (-\bm{B})
+    \label{eq:IV.59}
+\end{equation}
+\begin{equation}
+L_{ik} (\bm{B}) = \Tilde{L}_{ki} (-\bm{B})
+    \label{eq:IV.60}
+\end{equation}
+where the tildas mean transposing of Cartesian components $\mu$ and $\nu$
+of a tensor, for instance
+\begin{equation}
+\Tilde{L}_{iq, \mu \nu} (\bm{B}) = L_{iq, \nu \mu} (\bm{B})
+    \label{eq:IV.61}
+\end{equation}
+We note that for the anisotropic case, the Onsager relations, in the absence of a magnetic field ($\bm{B} = 0$), have as a consequence that the tensors $L_{qq}$ and $L_{ii}$ ($i = 1, 2, \ldots , n - l$) are symmetric. In the presence of a magnetic field the relations \eqref{eq:IV.58}-\eqref{eq:IV.60} yield also some information about the parity of certain coefficients with respect to reversal of the magnetic field.
+
+The Onsager relations have been written down here for the phenomenological equations involving the fluxes and thermodynamic forces occurring in the form \eqref{eq:IV.13} of the entropy production. Any of the alternative forms of the entropy production derived in Chapter III involving other fluxes and thermodynamic forces would have led to phenomenological laws with other coefficients for which, however, reciprocal relations still hold. In fact it can easily be seen that the transformations of Chapter III, from the description with one set of fluxes and thermodynamic forces to another, preserve the validity of the Onsager relations (cf. also Chapter VI, Section 5).
+
+\section{The Differential Equations}
+
+If one substitutes the phenomenological equations \eqref{eq:IV.14}-\eqref{eq:IV.18} into the conservation laws for matter \eqref{eq:II.13}, the momentum equation \eqref{eq:II.19} and the balance equation of internal energy \eqref{eq:II.36}, one obtains with \eqref{eq:II.5} a set of $n + 4$ partial differential equations for the $n + 4$ independent
+variables: the density $p$, the $n - 1$ concentrations $c_1,
+c_2 , \ldots , c_{n-1}$, the three Cartesian components $v_x$, $v_y$, and $v_z$ of the
+velocity $\bm{v}$, and the temperature $T$. The equations of state of the system allow to express the energy $u$, the equilibrium pressure $p$ and the chemical potentials $\mu_k$, occurring in the partial differential equations, in terms of those independent variables.
+
+For a one-component isotropic fluid these partial differential equations are (in the absence of external forces):
+\begin{equation}
+\frac{\partial \rho}{\partial t} = - \textrm{div } \rho \bm{v}
+    \label{eq:IV.62}
+\end{equation}
+\begin{equation}
+\rho \frac{d \bm{v}}{d t} = - \textrm{grad } p + \eta \Delta \bm{v} + \left(\frac{1}{3} \eta + \eta_v \right) \textrm{grad div } \bm{v}
+    \label{eq:IV.63}
+\end{equation}
+\begin{equation}
+\rho \frac{d u}{d t} = \lambda \Delta T - p \textrm{div } \bm{v} + 2 \eta (\mathring{\textrm{Grad } \bm{v}})^s : (\mathring{\textrm{Grad } \bm{v}})^s 
++ \eta_v (\textrm{div } v)^2
+    \label{eq:IV.64}
+\end{equation}
+The first of these equations is simply the equation of conservation of mass \eqref{eq:II.5}. The second is found by substituting \eqref{eq:IV.2}, \eqref{eq:IV.16} and \eqref{eq:IV.17} (without chemical terms) into \eqref{eq:II.9} with \eqref{eq:II.35}. The coefficients $\eta$ and $\eta_v$ defined as $\eta = L/2T$ and $\eta_v = l_{vv}/T$, are called the shear viscosity and the bulk viscosity respectively. It has been assumed here that the viscosity coefficients are constants. The third equation follows from \eqref{eq:II.36} with \eqref{eq:IV.14} (without diffusion terms), \eqref{eq:IV.16} and \eqref{eq:IV.17}. The coefficient $\lambda$, defined as $L_{qq}/T^2$, is called the heat conductivity, and has also been assumed to be a constant. The symbol $\Delta$ stands for the Laplace operator. These equations must be supplemented by the equations of state
+\begin{equation}
+p = p(\rho, T)
+    \label{eq:IV.65}
+\end{equation}
+\begin{equation}
+u = u(\rho, T)
+    \label{eq:IV.66}
+\end{equation}
+Equations \eqref{eq:IV.62}-\eqref{eq:IV.66} describe completely the time behaviour of the one component isotropic fluid for specified initial and boundary conditions. 
+
+It is customary to limit the field of hydrodynamics to equations \eqref{eq:IV.62}, \eqref{eq:IV.63} and \eqref{eq:IV.65} alone, by assuming that either isothermal or isentropic conditions are fulfilled. In both cases pressure is a function of density only, so that the hydrodynamic behaviour is completely described by \eqref{eq:IV.62} and \eqref{eq:IV.63}. In the more general case the complete set of equations \eqref{eq:IV.62}-\eqref{eq:IV.66} is necessary to describe the behaviour of the system. One might call the theory based on this complete set of equations "thermohydrodynamics" which is thus found to be part of the more general theory of non-equilibrium thermodynamics. On the other hand the theory of heat conduction is also contained in these equations.
+
+We note that \eqref{eq:IV.63} is the well-known Navier-Stokes equation. The last two terms of \eqref{eq:IV.64} represent the Rayleigh dissipation function. Equation \eqref{eq:IV.64} becomes Fourier's differential equation for heat conduction
+\begin{equation}
+\rho c_v \frac{\partial T}{\partial t} = \lambda \Delta T
+    \label{eq:IV.67}
+\end{equation}
+for a medium in which the velocity $\bm{v}$ is zero; ($c_v = (\partial u / \partial T)_v$ is the specific heat at constant volume per unit mass).
+
+For more general cases, for instance in a multi-component system where diffusion occurs, the set of simultaneous differential equations becomes more complicated. It may be said that non-equilibrium thermodynamics has the purpose to study various irreversible processes as heat conduction, diffusion and viscous flow from a single point of view. It englobes a number of phenomenological theories such as the hydrodynamics of viscous fluids, the theory of diffusion and the theory of heat conduction.
