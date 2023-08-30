@@ -42,6 +42,7 @@ when they appear in the first member of the reaction equation. The
 quantity $J_j$ is called the chemical reaction rate of reaction $j$. It represents a mass per unit volume and unit time. The quantities $\rho_k$, $\bm{v}_k$ and $J_j$ occurring in \eqref{eq:II.2} are all functions of time and of space coordinates. Applying Gauss' theorem to the surface integral occurring in \eqref{eq:II.2}, we obtain
 \begin{equation}
 \frac{\partial \rho_k}{\partial t} = - \textrm{div } \rho_k \bm{v}_k
++ \sum_{j=1}^{r} \nu_{kj} J_j
     \label{eq:II.3}
 \end{equation}
 
@@ -80,12 +81,12 @@ barycentric motion
 \end{equation}
 With the help of \eqref{eq:II.8} and \eqref{eq:II.9}, equations \eqref{eq:II.3} become
 \begin{equation}
-\frac{d rho_k}{d t} = - \rho_k \textrm{div } \bm{v} - \textrm{div } \bm{J}_k + \sum_{j=1}^r \nu_{kj} J_j
+\frac{d \rho_k}{d t} = - \rho_k \textrm{div } \bm{v} - \textrm{div } \bm{J}_k + \sum_{j=1}^r \nu_{kj} J_j
     \label{eq:II.10}
 \end{equation}
 and equation \eqref{eq:II.5}
 \begin{equation}
-\frac{d rho}{d t} = - \rho \textrm{div } \bm{v}
+\frac{d \rho}{d t} = - \rho \textrm{div } \bm{v}
     \label{eq:II.11}
 \end{equation}
 If mass fractions $c_k$:
