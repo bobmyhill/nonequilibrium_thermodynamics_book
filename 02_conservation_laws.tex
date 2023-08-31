@@ -184,7 +184,7 @@ where
 
 With the help of \eqref{eq:II.16}, equation \eqref{eq:II.23} becomes
 \begin{equation}
-\rho \frac{\partial \frac{1}{2} \rho v^2}{\partial t} = 
+\frac{\partial \frac{1}{2} \rho v^2}{\partial t} = 
 - \textrm{div } \left(\frac{1}{2} \rho \bm{v}^2 \bm{v} + \bm{P}\cdot \bm{v}\right)
 +
 \bm{P} : \textrm{Grad } \bm{v} + \sum_k \rho_k \bm{F}_k \cdot \bm{v}
@@ -266,7 +266,7 @@ flux includes a convective term $\rho e \bm{v}$, an energy flux $\bm{P} \cdot \b
 
 This relation may be considered as defining the heat flow $\bm{J}_q$. If we subtract equation \eqref{eq:II.29} from equation \eqref{eq:II.31}, we obtain, using also \eqref{eq:II.32} and \eqref{eq:II.33}, the balance equation for the internal energy $u$:
 \begin{equation}
-\frac{\partial \rho u}{\partial t} = - \textrm{div } \left( \rho u \bm{v} \right) - \bm{P} : \textrm{grad } \bm{v} + \sum_k \bm{J}_k \cdot \bm{F}_k
+\frac{\partial \rho u}{\partial t} = - \textrm{div } \left( \rho u \bm{v} + \bm{J}_q \right) - \bm{P} : \textrm{grad } \bm{v} + \sum_k \bm{J}_k \cdot \bm{F}_k
     \label{eq:II.34}
 \end{equation}
 
